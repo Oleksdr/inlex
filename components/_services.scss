@@ -1,0 +1,190 @@
+.main_services{
+    padding-top: 67px;
+    h2{
+        font-family: "Roboto", sans-serif;
+        font-weight: 500;
+        font-size: 32px;
+        text-align: center;
+        color: #222;
+    }
+}
+
+.main_services_wrapper{
+    display: flex;
+    flex-direction: column;
+    margin-top: 39px;
+    padding: 0 190px;
+    gap: 81px;
+    width: 75%;
+}
+
+.main_services_info{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.main_services_info_text{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 32px;
+    width: 23%;
+    h2{
+        font-family: "Roboto", sans-serif;
+        font-weight: 500;
+        font-size: 22px;
+        color: #222;
+        text-align: left;
+    }
+    p{
+        font-family: "Roboto", sans-serif;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 129%;
+        color: #2b2b2b;
+        max-width: 330px;
+        margin-top: 20px;
+    }
+    .services_button{
+        border: 1px solid #222;
+        border-radius: 120px;
+        padding: 16px 16px 16px 24px;
+        background: none;
+        align-items: center;
+        display: flex;
+        justify-content: space-between;
+        width: 80%;
+        a{
+            font-family: "Onest", sans-serif;
+            font-weight: 500;
+            font-size: 13px;
+            color: #222;
+            text-decoration: none;
+            
+        }
+    }
+    ul{
+        display: flex;
+        flex-direction: column;
+        list-style: disc;
+        margin-left: 6%;
+        li{
+            font-family: "Roboto", sans-serif;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 129%;
+            color: #2b2b2b;
+            max-width: 330px;
+        }
+    }
+}
+
+
+.main_services_info_img{
+    position: relative;
+    a{
+        position: absolute;
+        top: 15px;
+        right: 15px;
+    }
+    img{
+        width: 500px;
+        height: 500px;
+    }
+}
+
+.main_services_info_img_text{
+    width: 100%;
+    position: absolute;
+    bottom: 20px;
+    left: 27px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    .main_services_info_img_text_item{
+        width: 40%;
+        border: 1px solid rgba(255, 255, 255, 0.6);
+        border-radius: 10px;
+        padding: 10px;
+        &:last-child{
+            padding-left: 20px;
+        }
+        p{
+            font-family: "Roboto", sans-serif;
+            font-weight: 400;
+            font-size: 12px;
+            line-height: 150%;
+            color: #fff;
+        }
+    }
+}
+
+.main_services_info_img_text2{
+    position: absolute;
+    bottom: 20px;
+    left: 27px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    .main_services_info_img_text_item2{
+        border: 1px solid rgba(255, 255, 255, 0.6);
+        border-radius: 10px;
+        padding: 10px;
+        max-width: 205px;
+        &:last-child{
+            max-width: 99px;
+        }
+        p{
+            font-family: "Roboto", sans-serif;
+            font-weight: 400;
+            font-size: 12px;
+            line-height: 150%;
+            color: #fff;
+        }
+    }
+}
+
+.main_services_info_img_text3{
+    position: absolute;
+    bottom: 20px;
+    left: 27px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    .main_services_info_img_text_item3{
+        border: 1px solid rgba(255, 255, 255, 0.6);
+        border-radius: 10px;
+        padding: 10px;
+        max-width: 440px;
+        p{
+            font-family: "Roboto", sans-serif;
+            font-weight: 400;
+            font-size: 12px;
+            line-height: 150%;
+            color: #fff;
+        }
+    }
+}
+
+.main_services_info_img_text4{
+    position: absolute;
+    bottom: 20px;
+    left: 27px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    .main_services_info_img_text_item4{
+        border: 1px solid rgba(255, 255, 255, 0.6);
+        border-radius: 10px;
+        padding: 10px;
+        max-width: 114px;
+        p{
+            font-family: "Roboto", sans-serif;
+            font-weight: 400;
+            font-size: 12px;
+            line-height: 150%;
+            color: #fff;
+        }
+    }
+}

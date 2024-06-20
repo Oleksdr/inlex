@@ -1,0 +1,103 @@
+.main_proposition_wrapper{
+    display: flex;
+    flex-direction: column;
+    gap: 38px;
+    padding: 0 64px;
+}
+
+.main_proposition_functions{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 38px;
+    .proposition_button{
+        border-radius: 8px;
+        padding: 16px 16px 16px 24px;
+        background: $secondary-color;
+        border: none;
+        width: 10%;
+        a{
+            font-family: "Onest", sans-serif;
+            display: flex;
+            gap: 10px;
+            align-items: center;
+            font-weight: 500;
+            font-size: 13px;
+            color: $white;
+            text-decoration: none;
+        }
+    }
+}
+
+.input_wrapper{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    border: 1px solid #e2e2e2;
+    border-radius: 16px;
+    padding: 15px 25px; 
+    width: 55%;
+    input{
+        border: none;
+        outline: none;
+        font-family: "Roboto", sans-serif;
+        width: 100%;
+        font-weight: 400;
+        font-size: 16px;
+        color: $black;
+    }
+}
+
+.main_proposition_menu{
+    display: flex;
+    flex-direction: column;
+    .main_proposition_about{
+        display: grid;
+        grid-template-columns: repeat(3, 32%);
+        justify-content: space-between;
+        row-gap: 15px;
+        width: 100%;
+        .main_proposition_about_info{
+            flex: 1;
+            
+            border: 1px solid #f1f1f1;
+            border-radius: 16px;
+            box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.03);
+            background: $white;
+            display: flex;
+            flex-direction: column;
+            padding-top: 30px;
+            padding-left: 30px;
+            padding-bottom: 43px;
+            .main_proposition_about_info_text{
+                margin-top: 34px;
+                display: flex;
+                flex-direction: column;
+                width: 81%;
+                gap: 28px;
+                h2{
+                    font-family: "Roboto", sans-serif;
+                    font-weight: 500;
+                    font-size: 28px;
+                    color: $black;
+                    width:110%;
+                }
+                p{
+                    font-family: "Roboto", sans-serif;
+                    font-weight: 400;
+                    font-size: 14px;
+                    color: #717171;
+                }
+            }
+            a{
+                margin-top: 47px;
+                text-decoration: none;
+                font-family: "Roboto", sans-serif;
+                font-weight: 400;
+                font-size: 14px;
+                color: $secondary-color;
+            }
+        }
+    }
+}
+
+

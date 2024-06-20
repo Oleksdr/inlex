@@ -1,0 +1,98 @@
+footer{
+    margin-top: 129px;
+    border-radius: 55px 55px 0 0;
+    background: #191c38;
+}
+
+.footer_wrapper{
+    padding: 58px 140px 68px 140px;
+    display: flex;
+    flex-direction: column;
+}
+
+.footer_logo{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    .footer_logo_contacts{
+        display: flex;
+        gap: 16px;
+        align-items: center;
+    }
+}
+
+.footer_message{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 31px;
+    p{
+        font-family: "Roboto", sans-serif;
+        font-weight: 500;
+        font-size: 14px;
+        color: #f6f6f6;
+        max-width: 305px;
+    }
+    .footer_menu{
+        display: flex;
+        gap: 80px;
+        margin-right: 10%;
+        li{
+            a{
+                font-family: "Roboto", sans-serif;
+                font-weight: 400;
+                font-size: 14px;
+                color: #fff; 
+                text-decoration: none;   
+            }
+        }
+    }
+}
+
+.footer_message_text{
+    display: flex;
+    flex-direction: column;
+    li{
+        font-family: "Roboto", sans-serif;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 164%;
+        color: #f6f6f6;
+        max-width: 305px;
+    }
+}
+
+.footer_end{
+    margin-top: 45px;
+    display: flex;
+    justify-content: space-between;
+    .footer_end_text{
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        li{
+            font-family: "Roboto", sans-serif;
+            font-weight: 400;
+            font-size: 14px;
+            color: #f6f6f6;
+        }
+    }
+}
+
+
+.footer_button{
+    border: 1px solid #f4f4f4;
+    border-radius: 12px;
+    padding: 16px 45px;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.05);
+    background: #fff;
+    width: 16%;
+    margin-right: 3%;
+    a{
+        font-family: "Roboto", sans-serif;
+        text-decoration: none;
+        font-weight: 400;
+        font-size: 16px;
+        text-align: center;
+        color: #191c38;
+    }
+}

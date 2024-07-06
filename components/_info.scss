@@ -1,11 +1,31 @@
+@import"./media.scss";
+
 .main_info{
     padding-top: 130px;
+    @include tablet{
+        padding-top: 25px;
+    }
 }
 
 .main_info_wrapper{
     padding: 0 64px;
     display: flex;
     gap: 28px;
+    @include laptop{
+        flex-direction: column;
+    }
+    @include phone{
+        padding: 0 16px;
+    }
+}
+
+.main_info_content{
+    display: flex;
+    align-items: center;
+    gap: 28px;
+    @include phone{
+        flex-direction: column;
+    }
 }
 
 .main_info_about{
@@ -18,23 +38,73 @@
     box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.03);
     background: #dba77b;
     gap: 38px;
-    button{
+    @include phone{
+        width: 90%;
+    }
+    .info_link{
+        text-decoration: none;
         border-radius: 8px;
-        background-image: url("../img/Frame\ 1321317595\ \(1\).png");
-        background-repeat:no-repeat;
-        background-size:cover;
-        background-position:center ;
+        background: #fff;
         border: none;
         text-align: left;
         padding: 13px 0;
         padding-left: 21px;
-        a{
-            font-family: "Roboto", sans-serif;
-            font-weight: 400;
-            font-size: 14px;
-            color: #dba77b;
-            text-decoration: none;
+        margin-top: 15px;
+        position: relative;
+        .svg_info1{
+            position: absolute;
+            stroke-width: 1px;
+            stroke: #dba77b;
+            left: 35%;
+            top: -50%;
+            @include tablet{
+                left: 43%;
+            }
+        }
+        .svg_info2{
+            position: absolute;
+            stroke-width: 1px;
+            stroke: #dba77b;    
+            left: 52%;
+            top: -40%;
+            @include tablet{
+                left: 58%;
+                top: 10px;
+                height: 30px;
+            }
+            @include phonemini{
+                left: 63%;
+                width: 120px;
+            }
+        }
+        .svg_info3{
+            position: absolute;
+            stroke-width: 1px;
+            stroke: #dba77b;
+            left: 67%;
+            bottom: 2%;
+            @include tablet{
+                left: 88%;
+                height: 19px;
+                width: 60px;
+            }
+            @include phone{
+                left: 81%;
+            }
+            @include phonemini{
+                left: 80%;
+                width: 70px;
+            }
+        }
+        .infoo_button{
             
+                font-family: "Roboto", sans-serif;
+                font-weight: 400;
+                font-size: 14px;
+                color: #dba77b;
+                text-decoration: none;
+                
+        
         }
     }
     h2{
@@ -53,6 +123,10 @@
             font-weight: 400;
             font-size: 14px;
             color: $white;
+            @include tablet{
+                font-size: 12px;
+                line-height: 14px;
+            }
         }
     }
 }
@@ -64,15 +138,27 @@
     flex-direction: column;
     border-radius: 16px;
     box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.03);
-    background-image: url("../img/Frame\ 1321317589.png");
-    background-repeat:no-repeat;
-    background-size:cover;
-    background-position:center ;
+    background: #fff;
     gap: 31px;
     padding-top: 40px;
     padding-left: 22px;
     padding-right: 22px;
-    padding-bottom: 60px;
+    padding-bottom: 90px;
+    position: relative;
+    @include phone{
+        width: 90%;
+    }
+    .svg_info_about{
+        position: absolute;
+        right: 0;
+        bottom: 0;
+    }
+    .svg_info_about2{
+        position: absolute;
+        top: 45px;
+        right: 22px;
+       
+    }
     h2{
         font-family: "Roboto", sans-serif;
         font-weight: 500;
@@ -89,6 +175,10 @@
             font-weight: 500;
             font-size: 14px;
             color: #717171;
+            @include tablet{
+                font-size: 12px;
+                line-height: 14px;
+            }
         }
     }
 }
@@ -98,26 +188,41 @@
     flex-direction: column;
     gap: 6px;
     flex: 1;
+    @include laptop{
+        gap: 0;
+        justify-content: space-between;
+        flex-direction: row;
+    }
+    @include tablet{
+        gap: 28px;
+    }
+    @include phone{
+        flex-direction: column;
+    }
     .main_info_about3_info{
         display: flex;
         justify-content: space-between;
+        @include tablet{
+            width: 100%;
+            gap: 20px;
+        }
         .Businesses{
             width: 40%;
             border-radius: 16px;
             box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.03);
-            background-image: url("../img/Frame\ 1321317595.png");
-            background-repeat:no-repeat;
-            background-size:cover;
-            background-position:center ;
+            background-color: #fff;
             display: flex;
             flex-direction: column;
             gap: 25px;
             padding: 27px 15px;
-            &:last-child{
-                background-image: url("../img/Frame\ 1321317592.png");
-                background-repeat:no-repeat;
-                background-size:cover;
-                background-position:center ;
+            position: relative;
+            @include tablet{
+                width: 50%;
+            }
+            .svg_buisnes{
+                position: absolute;
+                top: 0;
+                right: 0;
             }
             h2{
                 font-family: "Roboto", sans-serif;
@@ -131,25 +236,45 @@
                 font-size: 14px;
                 color: #717171;
                 max-width: 174px;
+                @include tablet{
+                    font-size: 12px;
+                    line-height: 14px;
+                }
             }
         }
     }
-    .info_button{
+.main_info_about3_content{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    @include laptop{
+        width: 50%;
+    }
+    @include tablet{
+        width: 100%;
+    }
+}
+
+    .infoo_link{
+        text-decoration: none;
         border-radius: 6px;
         padding: 16px;
         backdrop-filter: blur(22px);
-        background: rgba(219, 167, 123, 0.85);
+        background: #dba77b;
         border: none;
         padding: 12px 16px;
-        a{
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            font-family: "Roboto", sans-serif;
-            font-weight: 400;
-            font-size: 14px;
-            color: #fff;
-            text-decoration: none;
+        .info_button{
+           
+            
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                font-family: "Roboto", sans-serif;
+                font-weight: 400;
+                font-size: 14px;
+                color: #fff;
+               
+        
         }
     }
 }
@@ -162,18 +287,26 @@
     padding-bottom: 14px;
     padding-left: 14px;
     padding-right: 8px;
+    @include tablet{
+        width: 100%;
+    }
     p{
         font-family: "Roboto", sans-serif;
         font-weight: 400;
         font-size: 14px;
         color: #717171;
+        @include tablet{
+            font-size: 12px;
+            line-height: 14px;
+            width: 100%;
+        }
     }
 }
 
 .main_info_about3_contact{
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    gap: 10px;
     .main_info_about3_input_wrapper{
         display: flex;
         align-items: center;
@@ -183,6 +316,10 @@
         backdrop-filter: blur(34.79999923706055px);
         background: #fff;
         width: 100%;
+        justify-content: space-between;
+        @include tablet{
+            width: 40%;
+        }
         input{
             border: none;
             outline: none;
@@ -190,6 +327,9 @@
             font-weight: 400;
             font-size: 13px;
             color: #717171;
+            @include tablet{
+                width: 100%;
+            }
         }
     }
 }

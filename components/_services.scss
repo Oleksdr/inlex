@@ -1,11 +1,28 @@
+@import"./media.scss";
+
 .main_services{
     padding-top: 67px;
+    @include laptop{
+        padding-left: 64px;
+        padding-right: 64px;
+    }
+    @include tablet{
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+    @include phone{
+        padding-left: 16px;
+        padding-right: 16px;
+    }
     h2{
         font-family: "Roboto", sans-serif;
         font-weight: 500;
         font-size: 32px;
         text-align: center;
         color: #222;
+        @include phone{
+            display: none;
+        }
     }
 }
 
@@ -16,12 +33,25 @@
     padding: 0 190px;
     gap: 81px;
     width: 75%;
+    @include desctop{
+        width: 70%;
+    }
+    @include laptop{
+        padding: 0;
+        width: 100%;
+    }
 }
 
 .main_services_info{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    @include tablet{
+        gap: 20px;
+    }
+    @include phone{
+        flex-direction: column;
+    }
 }
 
 .main_services_info_text{
@@ -30,12 +60,22 @@
     align-items: flex-start;
     gap: 32px;
     width: 23%;
+    @include tablet{
+        width: 43%;
+    }
+    @include phone{
+        width: 100%;
+        order: 2;
+    }
     h2{
         font-family: "Roboto", sans-serif;
         font-weight: 500;
         font-size: 22px;
         color: #222;
         text-align: left;
+        @include tablet{
+            line-height: 25px;
+        }
     }
     p{
         font-family: "Roboto", sans-serif;
@@ -45,23 +85,30 @@
         color: #2b2b2b;
         max-width: 330px;
         margin-top: 20px;
+        @include tablet{
+            font-size: 12px;
+            line-height: 18px;
+        }
     }
-    .services_button{
-        border: 1px solid #222;
-        border-radius: 120px;
-        padding: 16px 16px 16px 24px;
-        background: none;
-        align-items: center;
-        display: flex;
-        justify-content: space-between;
-        width: 80%;
-        a{
-            font-family: "Onest", sans-serif;
-            font-weight: 500;
-            font-size: 13px;
-            color: #222;
+    .services_link{
+            border: 1px solid #222;
+            border-radius: 120px;
+            padding: 16px 16px 16px 24px;
+            background: none;
+            width: 80%;
             text-decoration: none;
-            
+            @include phone{
+                width: 40%;
+            }
+        .services_button{
+            align-items: center;
+            display: flex;
+            justify-content: space-between;
+                font-family: "Onest", sans-serif;
+                font-weight: 500;
+                font-size: 13px;
+                color: #222;
+                text-decoration: none;
         }
     }
     ul{
@@ -76,6 +123,10 @@
             line-height: 129%;
             color: #2b2b2b;
             max-width: 330px;
+            @include tablet{
+                font-size: 13px;
+                line-height: 18px;
+            }
         }
     }
 }
@@ -91,6 +142,22 @@
     img{
         width: 500px;
         height: 500px;
+        @include tablet{
+            width: 400px;
+            height: 400px;
+        }
+        @include phone{
+            width: 390px;
+            height: 380px;
+            
+        }
+        @include phonemini{
+            width: 350px;
+        }
+        @include mobileS{
+            width: 290px;
+            height: 290px;
+        }
     }
 }
 
@@ -102,7 +169,28 @@
     display: flex;
     align-items: center;
     gap: 12px;
+    @include tablet{
+        gap: 62px;
+    }
+    @include phone{
+        width: 94%;
+        left: 15px;
+    }
+    @include mobileS{
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 12px;
+    }
     .main_services_info_img_text_item{
+        @include tablet{
+            width: 30%;
+        }
+        @include phone{
+            width: 35%;
+        }
+        @include mobileS{
+            width: 40%;
+        }
         width: 40%;
         border: 1px solid rgba(255, 255, 255, 0.6);
         border-radius: 10px;
@@ -116,6 +204,9 @@
             font-size: 12px;
             line-height: 150%;
             color: #fff;
+            @include phonemini{
+                font-size: 11px;
+            }
         }
     }
 }
@@ -127,6 +218,10 @@
     display: flex;
     align-items: center;
     gap: 12px;
+    @include mobileS{
+        flex-direction: column;
+        align-items: flex-start;
+    }
     .main_services_info_img_text_item2{
         border: 1px solid rgba(255, 255, 255, 0.6);
         border-radius: 10px;
@@ -134,6 +229,11 @@
         max-width: 205px;
         &:last-child{
             max-width: 99px;
+        }
+        &:last-child{
+            @include mobileS{
+                order: 2;
+            }
         }
         p{
             font-family: "Roboto", sans-serif;
@@ -157,6 +257,9 @@
         border-radius: 10px;
         padding: 10px;
         max-width: 440px;
+        @include tablet{
+            margin-right: 20px;
+        }
         p{
             font-family: "Roboto", sans-serif;
             font-weight: 400;
@@ -174,6 +277,13 @@
     display: flex;
     align-items: center;
     gap: 12px;
+    @include tablet{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    @include mobileS{
+        margin-right: 15px;
+    }
     .main_services_info_img_text_item4{
         border: 1px solid rgba(255, 255, 255, 0.6);
         border-radius: 10px;
@@ -187,4 +297,10 @@
             color: #fff;
         }
     }
+}
+
+.main_services_info_img_text4_content{
+    display: flex;
+    align-items: center;
+    gap: 12px;
 }

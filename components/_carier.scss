@@ -2,6 +2,14 @@
     padding-top: 71px;
     padding-left: 64px;
     padding-right: 64px;
+    @include tablet{
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+    @include phone{
+        padding-left: 16px;
+        padding-right: 16px;
+    }
 }
 
 .main_carier_wrapper{
@@ -13,13 +21,44 @@
     box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.03);
 }
 
+.main_carier_content{
+    display: none;
+    flex-direction: column;
+    gap: 25px;
+    @include laptop{
+        display: flex;
+    }
+    @include mobileS{
+        gap: 0px;
+    }
+}
+
 .main_carier_container{
     padding: 0 57px;
     display: flex;
     justify-content: space-between; 
-    img{
+    @include laptop{
+        padding: 0;
+        justify-content: flex-start;
+    }
+    @include phone{
+        align-items: center;
+        justify-content: flex-start;
+        gap: 20px;
+    }
+    @include mobileS{
+        gap: 0px;
+    }
+    .img_carier{
         display: block;
         height: 100%;
+        @include tablet{
+            margin-left: -50px;
+            margin-right: -20px;
+        }
+        @include phone{
+            display: none;
+        }
     }
   
 }
@@ -29,6 +68,43 @@
     flex-direction: column;
     gap: 21px;
     margin-top: 96px;
+    @include laptop{
+        display: none;
+    }
+    h2{
+        font-family: "Roboto", sans-serif;
+        font-weight: 500;
+        font-size: 28px;
+        color: #fff;
+        @include tablet{
+            font-size: 24px;
+        }
+    }
+    P{
+        font-family: "Roboto", sans-serif;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 129%;
+        color: #fff;
+        max-width: 366px;
+        @include tablet{
+            font-size: 12px;
+            line-height: 18px;
+        }
+    }
+}
+
+.main_carier_text2{
+    display: flex;
+    flex-direction: column;
+    gap: 21px;
+    margin-top: 96px;
+    @include phone{
+        margin-top: 16px;
+    }
+    @include mobileS{
+        gap: 15px;
+    }
     h2{
         font-family: "Roboto", sans-serif;
         font-weight: 500;
@@ -42,6 +118,11 @@
         line-height: 129%;
         color: #fff;
         max-width: 366px;
+        @include phone{
+            font-size: 10px;
+            line-height: 18px;
+            max-width: 158px;
+        }
     }
 }
 
@@ -57,6 +138,9 @@
     backdrop-filter: blur(22px);
     background: rgba(255, 255, 255, 0.17);
     margin-top: 94px;
+    @include laptop{
+        display: none;
+    }
     .main_carier_contact_wrapper{
         width: 90%;
         display: flex;
@@ -84,26 +168,45 @@
     }
     
 }
-
-button{
+.carier_link{
+    text-decoration: none;
     border-radius: 6px;
-    width: 98%;
+    width: 91%;
     padding: 16px;
     backdrop-filter: blur(22px);
-    background: rgba(219, 167, 123, 0.85);
+    background: #dba77b;
     border: none;
     padding: 12px 16px;
-    a{
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        font-family: "Roboto", sans-serif;
-        font-weight: 400;
-        font-size: 14px;
-        color: #fff;
-        text-decoration: none;
+    @include phone{
+        padding: 8px 16px;
+        margin-bottom: 10px;
+        width: 80%;
     }
-}    
+    @include phonemini{
+        width: 70%;
+    }
+    .carier_button{
+  
+        
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-family: "Roboto", sans-serif;
+            font-weight: 400;
+            font-size: 14px;
+            color: #fff;
+            
+        @include mobileS{
+            font-size: 11px;
+        }
+        svg{
+            @include mobileS{
+                width: 15px;
+            }
+        }
+    }    
+    
+}
 
 
 .main_carier_container_info{
@@ -111,4 +214,18 @@ button{
     gap: 73px;
     align-items: center;
    
+}
+
+.img_carier2{
+    display: none;
+    @include phone{
+        display: flex;
+        height: 336px;
+        width: 202px;
+        margin-top: -15px;
+        margin-left: -28px;
+    }
+    @include mobileS{
+        height: 386px;
+    }
 }

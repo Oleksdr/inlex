@@ -1,29 +1,58 @@
+@import"./media.scss";
+
+
 .main_proposition_wrapper{
     display: flex;
     flex-direction: column;
     gap: 38px;
     padding: 0 64px;
+    @include laptop{
+        padding: 0 40px;
+    }
+    @include phone{
+        padding: 0 16px;
+    }
 }
 
 .main_proposition_functions{
     display: flex;
     justify-content: space-between;
     margin-top: 38px;
-    .proposition_button{
+    @include phone{
+        gap: 20px;
+    }
+    .proposition_link{
+        text-decoration: none;
         border-radius: 8px;
-        padding: 16px 16px 16px 24px;
+        padding: 20px 16px 16px 24px;
         background: $secondary-color;
         border: none;
-        width: 10%;
-        a{
-            font-family: "Onest", sans-serif;
-            display: flex;
-            gap: 10px;
-            align-items: center;
-            font-weight: 500;
-            font-size: 13px;
-            color: $white;
-            text-decoration: none;
+        width: 7%;
+        @include laptop{
+            width: 10%;
+        }
+        @include tablet{
+            width: 12%;
+        }
+        @include phone{
+            width: 18%;
+            padding: 9px 24px;
+        }
+        @include mobileS{
+            width: 23%;
+            padding: 9px 12px;
+        }
+        .proposition_button{
+                font-family: "Onest", sans-serif;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                font-weight: 500;
+                font-size: 13px;
+                color: $white;
+                @include phonemini{
+                    font-size: 10px;
+                }
         }
     }
 }
@@ -36,6 +65,13 @@
     border-radius: 16px;
     padding: 15px 25px; 
     width: 55%;
+    @include phone{
+        padding: 0;
+        width: 70%;
+    }
+    @include mobileS{
+        gap: 10px;
+    }
     input{
         border: none;
         outline: none;
@@ -44,6 +80,12 @@
         font-weight: 400;
         font-size: 16px;
         color: $black;
+        @include phonemini{
+            font-size: 13px;
+        }
+        @include mobileS{
+            font-size: 11px;
+        }
     }
 }
 
@@ -56,9 +98,18 @@
         justify-content: space-between;
         row-gap: 15px;
         width: 100%;
+        @include laptop{
+            grid-template-columns: repeat(2, 48%);
+        }
+        @include phone{
+            grid-template-columns: repeat(1, 100%);
+        }
+        a{
+            text-decoration: none;
+        }
         .main_proposition_about_info{
             flex: 1;
-            
+            height: 70%;
             border: 1px solid #f1f1f1;
             border-radius: 16px;
             box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.03);
@@ -86,6 +137,10 @@
                     font-weight: 400;
                     font-size: 14px;
                     color: #717171;
+                    @include tablet{
+                        font-size: 12px;
+                        line-height: 14px;
+                    }
                 }
             }
             a{

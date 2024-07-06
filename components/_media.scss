@@ -1,0 +1,35 @@
+@mixin desctop(){
+    @media(max-width: 1440px){
+        @content
+    }
+};
+
+@mixin laptop(){
+    @media(max-width: 1024px){
+        @content
+    }
+};
+
+@mixin tablet(){
+    @media(max-width: 768px){
+        @content
+    }
+};
+
+@mixin phone(){
+    @media(max-width: 500px){
+        @content
+    }
+};
+
+@mixin phonemini(){
+    @media(max-width: 385px){
+        @content
+    }
+};
+
+@mixin mobileS(){
+    @media(max-width: 330px){
+        @content
+    }
+};
